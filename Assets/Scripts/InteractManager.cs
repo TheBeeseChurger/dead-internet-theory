@@ -5,10 +5,20 @@ public class InteractManager : MonoBehaviour
 {
     [SerializeField] private LayerMask interactableLayers;
     [SerializeField] private InputActionReference interactAction;
+    [SerializeField] private GameObject keybindHint;
 
     public bool interactionEnabled = true;
 
     private IInteractable currentInteractable;
+    private GameObject currentGameObject;
+    private int currentLayer;
+
+    private LayerMask outlinedLayer;
+
+    private void Start()
+    {
+        outlinedLayer = LayerMask.NameToLayer("Outline");
+    }
 
     private void OnEnable()
     {
@@ -45,6 +55,12 @@ public class InteractManager : MonoBehaviour
                 ClearCurrent();
                 currentInteractable = interactable;
                 currentInteractable?.OnHoverEnter();
+
+                currentLayer = hit.collider.gameObject.layer;
+                currentGameObject = hit.collider.gameObject;
+                currentGameObject.layer = outlinedLayer;
+
+                keybindHint.SetActive(true);
             }
 
             if (interactAction.action.WasPressedThisFrame())
@@ -64,6 +80,10 @@ public class InteractManager : MonoBehaviour
         {
             currentInteractable.OnHoverExit();
             currentInteractable = null;
+            currentGameObject.layer = currentLayer;
+            currentGameObject = null;
+
+            keybindHint.SetActive(false);
         }
     }
 }

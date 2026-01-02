@@ -49,7 +49,8 @@ public class CameraController : MonoBehaviour
 
         velocity += new Vector2(input.x * panSpeed * Time.deltaTime, input.y * tiltSpeed * Time.deltaTime);
 
-        velocity = Vector2.Lerp(velocity, Vector2.zero, damping * Time.deltaTime);
+        float smooth = 1f - Mathf.Exp(-damping * Time.deltaTime);
+        velocity = Vector2.Lerp(velocity, Vector2.zero, smooth);
 
         yaw += velocity.x;
         pitch -= velocity.y;
