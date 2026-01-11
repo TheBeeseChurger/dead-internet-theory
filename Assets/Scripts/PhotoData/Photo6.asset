@@ -10,7 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a663baf7a36642e4c9daf96411458c70, type: 3}
-  m_Name: TestPhoto
+  m_Name: Photo6
   m_EditorClassIdentifier: 
-  defaultPhoto: {fileID: 2800000, guid: 53254bf46eb384547a37d207923f5aa5, type: 3}
-  warpedPrint: {fileID: 2800000, guid: 727a75301c3d24613a3ebcec4a24c2c8, type: 3}
+  defaultPhoto: {fileID: 2800000, guid: 228b8fc4eeafefd46861f7a13180c4a4, type: 3}
+  warpedPrint: {fileID: 0}
+  contentViolation: 0
+  guaranteeFilterAnomaly: 0
+  noFilterAnomaly: 0
+  guaranteePrintAnomaly: 0
+  noPrintAnomaly: 1
+  guaranteeScanAnomaly: 0
+  noScanAnomaly: 0

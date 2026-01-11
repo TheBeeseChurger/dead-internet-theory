@@ -37,7 +37,7 @@ public class CameraController : MonoBehaviour
     private void ResetValues()
     {
         Vector3 rot = transform.localEulerAngles;
-        yaw = rot.y;
+        yaw = rot.y < 180f ? rot.y : rot.y - 360f;
         pitch = rot.x;
     }
 

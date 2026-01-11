@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a663baf7a36642e4c9daf96411458c70, type: 3}
+  m_Name: Photo4
+  m_EditorClassIdentifier: 
+  defaultPhoto: {fileID: 2800000, guid: bb71ab399f873a94a87d959c2d6da101, type: 3}
+  warpedPrint: {fileID: 0}
+  contentViolation: 0
+  guaranteeFilterAnomaly: 0
+  noFilterAnomaly: 0
+  guaranteePrintAnomaly: 0
+  noPrintAnomaly: 1
+  guaranteeScanAnomaly: 0
+  noScanAnomaly: 0
